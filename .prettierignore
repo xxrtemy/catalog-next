@@ -1,0 +1,7 @@
+node_modules
+.next
+storybook-static
+dist
+build
+coverage
+.turbo
