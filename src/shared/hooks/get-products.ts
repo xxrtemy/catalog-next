@@ -1,6 +1,6 @@
 // src/lib/services/products-service.ts
 
-import type { ProductsResponse, ProductsPageResponse, ProductProps } from "@/types";
+import type { ProductsResponse, ProductsPageResponse, ProductProps } from "@/shared";
 import { mapTypes } from "../utils";
 
 export const PRODUCTS_PAGE_SIZE = 12;

@@ -1,6 +1,6 @@
 "use client";
 
-import { Card, CardContent, CardHeader, CardTitle, Badge, Button } from "@/shared/ui";
+import { Card, CardContent, CardHeader, CardTitle, Badge, Button } from "@/shared";
 import Image from "next/image";
 import { ProductCardProps } from "./interface";
 import { cn } from "@/lib/utils";
@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 export function ProductCard({ product, onAddToCart, className }: ProductCardProps) {
   return (
     <Card className={cn("flex h-full w-full max-w-xs flex-col", className)}>
-      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-t-lg">
+      <div className="relative aspect-4/3 w-full overflow-hidden rounded-t-lg">
         <Image src={product.imageUrl} alt={product.title} fill className="object-cover" />
       </div>
 

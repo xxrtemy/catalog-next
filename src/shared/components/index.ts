@@ -1,2 +1,2 @@
 export * from "./product-card";
-export * from "./";
+export * from "./ui";

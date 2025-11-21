@@ -1,10 +1,14 @@
 "use client";
 
 import { useInfiniteQuery } from "@tanstack/react-query";
-import { ProductCard } from "@/shared";
-import { Skeleton } from "@/shared/ui";
-import type { ProductProps } from "@/types/products";
-import { PAGE_SIZE, getProducts, useInfiniteScroll } from "@/shared";
+import {
+  PAGE_SIZE,
+  getProducts,
+  useInfiniteScroll,
+  ProductCard,
+  Skeleton,
+  ProductProps,
+} from "@/shared";
 
 export function Catalog() {
   const { data, isLoading, isError, fetchNextPage, hasNextPage, isFetchingNextPage } =
