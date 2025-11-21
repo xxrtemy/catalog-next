@@ -35,7 +35,7 @@ export function useInfiniteScroll({
           void onLoadMore();
         }
       },
-      { rootMargin }
+      { rootMargin },
     );
 
     observer.observe(target);

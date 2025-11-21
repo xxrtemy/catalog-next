@@ -1,10 +1,6 @@
 // src/lib/services/products-service.ts
 
-import type {
-  ProductsResponse,
-  ProductsPageResponse,
-  ProductProps,
-} from "@/types";
+import type { ProductsResponse, ProductsPageResponse, ProductProps } from "@/types";
 import { mapTypes } from "../utils";
 
 export const PRODUCTS_PAGE_SIZE = 12;
@@ -15,11 +11,9 @@ export const PRODUCTS_PAGE_SIZE = 12;
  */
 export async function getProducts(
   skip: number,
-  limit: number = PRODUCTS_PAGE_SIZE
+  limit: number = PRODUCTS_PAGE_SIZE,
 ): Promise<ProductsPageResponse> {
-  const res = await fetch(
-    `https://dummyjson.com/products?limit=${limit}&skip=${skip}`
-  );
+  const res = await fetch(`https://dummyjson.com/products?limit=${limit}&skip=${skip}`);
 
   if (!res.ok) {
     throw new Error("Failed to load products");
@@ -29,8 +23,7 @@ export async function getProducts(
 
   const items: ProductProps[] = json.products.map(mapTypes);
 
-  const nextSkip =
-    json.skip + json.limit < json.total ? json.skip + json.limit : null;
+  const nextSkip = json.skip + json.limit < json.total ? json.skip + json.limit : null;
 
   return {
     items,

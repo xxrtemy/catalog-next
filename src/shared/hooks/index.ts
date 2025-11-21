@@ -1,2 +1,2 @@
-export * from './get-products'
-export * from './use-infinite-scroll'
+export * from "./get-products";
+export * from "./use-infinite-scroll";

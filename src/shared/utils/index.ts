@@ -1,1 +1,1 @@
-export * from './types-mapper'
+export * from "./types-mapper";

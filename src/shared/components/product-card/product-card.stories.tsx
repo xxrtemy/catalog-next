@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { ProductCard } from "./product-card";
 import type { ProductProps } from "@/types";
-import '@/app/globals.css'
+import "@/app/globals.css";
 
 const baseProduct: ProductProps = {
   id: "1",
@@ -22,9 +22,9 @@ const meta = {
   args: {
     product: baseProduct,
     onAddToCart: () => {
-        console.log('action')
+      console.log("action");
     },
-    className: "max-w-sm"
+    className: "max-w-sm",
   },
   parameters: {
     docs: {
@@ -62,4 +62,3 @@ export const LongTitleAndDescription: Story = {
     },
   },
 };
-

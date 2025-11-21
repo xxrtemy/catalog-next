@@ -8,7 +8,7 @@ const config: StorybookConfig = {
     options: {
       appDirectory: true,
     },
-  }
+  },
 };
 
 export default config;
